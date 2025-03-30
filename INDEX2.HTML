@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA SEGURANÇA ELETRÔNICA</title>
+    <style>
+        /* Estilização básica */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fundo preto */
+            height: 100vh; /* Altura total da tela */
+            display: flex;
+            flex-direction: column; /* Alinha logo e texto em coluna */
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+        }
+
+        /* Contêiner para logo e texto */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilização da logo */
+        .logo {
+            max-width: 100%; /* Garante que a logo não ultrapasse a tela */
+            width: 300px; /* Tamanho inicial da logo (ajuste conforme necessário) */
+            height: auto; /* Mantém a proporção */
+            transition: transform 0.3s ease; /* Transição suave para o hover */
+            animation: fadeInOut 3s ease-in-out infinite; /* Animação contínua */
+        }
+
+        /* Efeito de hover na logo */
+        .logo:hover {
+            transform: scale(1.1); /* Aumenta 10% ao passar o mouse */
+            cursor: pointer; /* Muda o cursor para indicar interatividade */
+        }
+
+        /* Estilização do texto "EM BREVE" */
+        .em-breve {
+            color: #ffffff; /* Texto branco */
+            font-family: Arial, sans-serif; /* Fonte simples */
+            font-size: 24px; /* Tamanho do texto */
+            margin-top: 10px; /* Espaço entre logo e texto */
+            animation: fadeInOut 3s ease-in-out infinite; /* Mesma animação da logo */
+        }
+
+        /* Animação de fade in e out */
+        
+@keyframes
+ fadeInOut {
+            0% { opacity: 0; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.9); }
+        }
+
+        /* Ajustes para dispositivos móveis */
+        
+@media
+ (max-width: 768px) {
+            .logo {
+                width: 80%; /* Reduz a logo em telas menores */
+            }
+            .em-breve {
+                font-size: 18px; /* Reduz o texto no mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="D:\PDS EDITS\LOGO BRANCO SITE.png" alt="Logo" class="logo" onclick="alert('Logo clicada!')">
+        <span class="em-breve">EM BREVE</span>
+    </div>
+
+    <script>
+        // Interatividade opcional com JavaScript
+        const logo = document.querySelector('.logo');
+        logo.addEventListener('click', () => {
+            console.log('AGUARDE!');
+            // Substitua o alert por outra ação se desejar
+        });
+    </script>
+</body>
+</html>
