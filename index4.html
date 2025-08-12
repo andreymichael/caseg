@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASEG - Monitoramento Marítimo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            /* A imagem de mar e céu foi trocada aqui */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagem4.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        #back-to-top {
+            transition: opacity 0.3s ease;
+        }
+        .process-bg {
+            background-image: url('https://images.unsplash.com/photo-1516826957135-2357d0d7d436?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold text-gray-900">CASEG</a>
+        <div class="hidden md:flex space-x-6 lg:space-x-8">
+            <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Sobre Nós</a>
+            <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Serviços</a>
+            <a href="#process" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Etapas</a>
+            <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Benefícios</a>
+            <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Contato</a>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-gray-900">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden fixed top-16 right-0 w-3/4 bg-white shadow-lg">
+        <a href="#about" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 smooth-scroll">Sobre Nós</a>
+        <a href="#services" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 smooth-scroll">Serviços</a>
+        <a href="#process" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 smooth-scroll">Etapas</a>
+        <a href="#benefits" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 smooth-scroll">Benefícios</a>
+        <a href="#contact" class="block px-6 py-3 text-gray-600 hover:bg-gray-100 smooth-scroll">Contato</a>
+    </div>
+</header>
+
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-white text-center">
+    <div class="container mx-auto px-4 sm:px-6">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Segurança e Controle a Bordo</h1>
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8">A revolução da CASEG em câmeras embarcadas para o transporte marítimo.</p>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:bg-blue-700 transition duration-300">Solicite uma Proposta</a>
+    </div>
+</section>
+
+<section id="about" class="py-16 sm:py-20 bg-white fade-in-section">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+        <img src="fundohero2.jpeg" alt="Navio no porto" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900">Quem Somos</h2>
+        <p class="max-w-3xl mx-auto text-gray-600 mb-12 text-sm sm:text-base">Pioneiros em segurança marítima, expandindo nossa atuação por todo o Brasil com um modelo de segurança reconhecido nacionalmente.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+            <div class="p-6 card-hover">
+                <h3 class="text-lg sm:text-xl font-bold mb-2 text-blue-600">Pioneirismo</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Iniciamos em 2023 com foco na instalação de câmeras embarcadas para aumentar a segurança no transporte marítimo.</p>
+            </div>
+            <div class="p-6 card-hover">
+                <h3 class="text-lg sm:text-xl font-bold mb-2 text-blue-600">Expansão Nacional</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Do Porto de Santos para mais de 20 portos em todo o Brasil, graças a parcerias estratégicas.</p>
+            </div>
+            <div class="p-6 card-hover">
+                <h3 class="text-lg sm:text-xl font-bold mb-2 text-blue-600">Modelo Reconhecido</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Oferecemos soluções práticas que garantem a proteção de cargas, embarcações e tripulações.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="py-16 sm:py-20 bg-gray-50 fade-in-section">
+    <div class="container mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Nossos Serviços</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg card-hover">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Câmera de segurança" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-600">Instalação de Câmeras</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Instalação estratégica de câmeras com visão noturna, zoom óptico e estabilização para cobertura completa.</p>
+            </div>
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg card-hover">
+                <img src="https://images.unsplash.com/photo-1516321310764-4d5e6e1f2b1b?q=80&w=2070&auto=format&fit=crop" alt="Monitoramento remoto" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-600">Monitoramento Remoto 24/7</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Equipe altamente treinada monitorando 24/7, com comunicação direta com armadores e agências.</p>
+            </div>
+            <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg card-hover">
+                <img src="https://images.unsplash.com/photo-1618477461853-c0c7215c1523?q=80&w=2070&auto=format&fit=crop" alt="Transmissão ao vivo" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl sm:text-2xl font-bold mb-4 text-blue-600">Transmissão ao Vivo</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Link disponibilizado ao cliente para acompanhamento imediato das operações e geração de relatórios detalhados.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="process" class="py-16 sm:py-20 bg-white fade-in-section process-bg">
+    <div class="container mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Etapas da Nossa Operação</h2>
+        <div class="relative">
+            <div class="hidden md:block absolute h-full border-l-2 border-blue-300 left-1/2 transform -translate-x-1/2"></div>
+            <div class="space-y-12">
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="md:text-right md:pr-8">
+                        <div class="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto md:mr-0 mb-4">1</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 text-blue-600">Chegada a Bordo</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Garantimos uma sala exclusiva para a instalação e operação dos equipamentos com segurança.</p>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-8">
+                        <div class="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto md:ml-0 mb-4">2</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 text-blue-600">Instalação</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Realizada em 40 a 90 minutos, com posicionamento estratégico das câmeras para máxima cobertura.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="md:text-right md:pr-8">
+                        <div class="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto md:mr-0 mb-4">3</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 text-blue-600">Acompanhamento</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Criação de um grupo via WhatsApp para envio de fotos e atualizações em tempo real durante a operação.</p>
+                    </div>
+                    <div class="hidden md:block"></div>
+                </div>
+                <div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-8">
+                        <div class="bg-blue-600 text-white w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold mx-auto md:ml-0 mb-4">4</div>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 text-blue-600">Encerramento</h3>
+                        <p class="text-gray-600 text-sm sm:text-base">Registro final em foto e vídeo, retirada dos equipamentos e confirmação da conclusão da operação.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="py-16 sm:py-20 bg-gray-50 fade-in-section">
+    <div class="container mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Benefícios para o seu Negócio</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div class="flex items-start space-x-4 card-hover p-4">
+                <img src="imagem6.jpg" alt="Transparência" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-bold text-base sm:text-lg text-blue-600">Transparência Total</h4>
+                    <p class="text-gray-600 text-sm sm:text-base">Visão clara de todas as etapas do processo, aumentando a confiança na operação.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4 card-hover p-4">
+                <img src="imagem5.jpg" alt="Segurança jurídica" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-bold text-base sm:text-lg text-blue-600">Redução de Riscos Jurídicos</h4>
+                    <p class="text-gray-600 text-sm sm:text-base">Opere com mais segurança, minimizando problemas legais relacionados a cargas e operações.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4 card-hover p-4">
+                <img src="imagem7.jpeg" alt="Evidências" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-bold text-base sm:text-lg text-blue-600">Evidências Concretas</h4>
+                    <p class="text-gray-600 text-sm sm:text-base">Vídeos e fotos são fundamentais para resolver disputas e auditorias, oferecendo suporte sólido.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4 card-hover p-4">
+                <img src="imagem9.jpg" alt="Controle" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-bold text-base sm:text-lg text-blue-600">Maior Controle Operacional</h4>
+                    <p class="text-gray-600 text-sm sm:text-base">Gerencie melhor suas operações, otimizando processos e recursos com maior controle.</p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4 card-hover p-4">
+                <img src="imagem8.png" alt="Eficiência" class="w-12 h-12 object-cover rounded-md">
+                <div>
+                    <h4 class="font-bold text-base sm:text-lg text-blue-600">Segurança e Eficiência</h4>
+                    <p class="text-gray-600 text-sm sm:text-base">Garantia da integridade das cargas e bem-estar da tripulação em um ambiente de trabalho seguro.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-16 sm:py-20 bg-blue-700 text-white fade-in-section">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
+        <p class="max-w-2xl mx-auto mb-8 text-sm sm:text-base">Estamos prontos para atender suas necessidades em todos os portos do Brasil. Entre em contato para mais informações.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
+            <a href="tel:+5513997823014" class="text-base sm:text-lg font-semibold hover:text-blue-200 transition duration-300">(13) 99782-3014</a>
+            <a href="mailto:cleandro_bandeira@hotmail.com" class="text-base sm:text-lg font-semibold hover:text-blue-200 transition duration-300">cleandro_bandeira@hotmail.com</a>
+        </div>
+        <div class="max-w-md mx-auto">
+            <div class="space-y-4">
+                <input type="text" id="name" placeholder="Nome" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input type="email" id="email" placeholder="E-mail" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <textarea id="message" placeholder="Mensagem" rows="4" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                <button id="contact-submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Enviar Mensagem</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4 sm:px-6 text-center">
+        <p>&copy; 2024 CASEG Monitoramento Marítimo. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 opacity-0">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+</button>
+
+<script>
+    // Menu Mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('open');
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('.smooth-scroll').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('open');
+            }
+        });
+    });
+
+    // Fade-in Animation
+    const sections = document.querySelectorAll('.fade-in-section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.remove('opacity-0');
+            backToTopButton.classList.add('opacity-100');
+        } else {
+            backToTopButton.classList.remove('opacity-100');
+            backToTopButton.classList.add('opacity-0');
+        }
+    });
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Contact Form Validation
+    const contactSubmit = document.getElementById('contact-submit');
+    contactSubmit.addEventListener('click', () => {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        if (!name || !email || !message) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+        if (!email.includes('@')) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+    });
+</script>
+</body>
+</html>
