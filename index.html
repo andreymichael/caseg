@@ -11,7 +11,7 @@
             font-family: 'Inter', sans-serif;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagem4.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('imagem4.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -59,8 +59,8 @@
 <header class="bg-white shadow-md fixed w-full top-0 z-50">
     <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         <a href="#" class="block">
-    <img src="logo2.png" alt="Logo CASEG" class="h-10 w-auto">
-</a>
+            <img src="caseglogo.png" alt="Logo CASEG" class="h-10 w-auto">
+        </a>
         <div class="hidden md:flex space-x-6 lg:space-x-8">
             <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Sobre Nós</a>
             <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300 smooth-scroll">Solução</a>
@@ -82,16 +82,13 @@
 </header>
 
 <section id="home" class="hero-bg h-screen flex items-center justify-center text-white text-center">
-    <div class="container mx-auto px-4 sm:px-6 flex flex-col justify-between h-1/2">
-        
+    <div class="container mx-auto px-4 sm:px-6 flex flex-col justify-center md:justify-between md:h-1/2">
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Monitoramento a Bordo
         </h1>
-        
-        <p class="text-base sm:text-lg md:text-xl lg:text-2xl">
+        <p class="text-base sm:text-lg md:text-xl lg:text-2xl mt-4">
             Proteja sua carga, otimize operações e elimine disputas com um sistema de CCTV/VIGILÂNCIA que gera evidências irrefutáveis.
         </p>
-
     </div>
 </section>
 
@@ -124,31 +121,24 @@
             </p>
         </div>
         <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in-section">
-                <img src="instalação.jpg" alt="Técnico instalando câmera de segurança em navio" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-blue-600">Instalação Estratégica</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Implementamos câmeras de alta performance com visão noturna, zoom óptico e estabilização para uma cobertura completa e sem pontos cegos.</p>
-                </div>
+             <div class="text-center p-6 card-hover fade-in-section">
+                <img src="instalação.jpg" alt="Câmera de segurança instalada no convés de um navio" class="w-full h-48 object-cover object-center rounded-md mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Instalação Estratégica</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Implementamos câmeras de alta performance com visão noturna, zoom óptico e estabilização para uma cobertura completa e sem pontos cegos.</p>
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in-section">
-                <img src="fundohero2.jpeg" alt="Central de monitoramento com múltiplas telas" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-blue-600">Monitoramento 24/7</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Nossa equipe treinada monitora todas as atividades 24/7, com comunicação direta e ágil com armadores, agências e sua equipe.</p>
-                </div>
+            <div class="text-center p-6 card-hover fade-in-section">
+                <img src="monitoramento.jpg" alt="Câmera monitorando convés de navio à noite" class="w-full h-48 object-cover object-bottom rounded-md mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Monitoramento 24/7</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Nossa equipe treinada monitora todas as atividades 24/7, com comunicação direta e ágil com armadores, agências e sua equipe.</p>
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover fade-in-section">
-                <img src="relatorio.jpg" alt="Pessoa analisando relatórios em um tablet com navio ao fundo" class="w-full h-56 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 text-blue-600">Acesso e Relatórios</h3>
-                    <p class="text-gray-600 text-sm sm:text-base">Disponibilizamos um link exclusivo para você acompanhar suas operações ao vivo e gerar relatórios detalhados para análise e controle.</p>
-                </div>
+            <div class="text-center p-6 card-hover fade-in-section">
+                 <img src="relatorio.jpg" alt="Acesso a relatórios e imagens ao vivo em um tablet" class="w-full h-48 object-cover object-center rounded-md mb-6">
+                <h3 class="text-xl sm:text-2xl font-bold mb-3 text-gray-900">Acesso e Relatórios</h3>
+                <p class="text-gray-600 text-sm sm:text-base">Disponibilizamos um link exclusivo para você acompanhar suas operações ao vivo e gerar relatórios detalhados para análise e controle.</p>
             </div>
         </div>
     </div>
 </section>
-
 
 <section id="process" class="py-16 sm:py-20 bg-white process-bg">
     <div class="container mx-auto px-4 sm:px-6">
@@ -245,18 +235,12 @@
             <a href="mailto:cleandro_bandeira@hotmail.com" class="text-base sm:text-lg font-semibold hover:text-blue-200 transition duration-300">cleandro_bandeira@hotmail.com</a>
         </div>
         <div class="max-w-md mx-auto fade-in-section">
-    <form action="https://formspree.io/f/mvgqyzpz" method="POST" class="space-y-4">
-        
-        <input type="text" name="Nome" placeholder="Nome" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-        
-        <input type="email" name="Email" placeholder="E-mail" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-        
-        <textarea name="Mensagem" placeholder="Mensagem" rows="4" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
-        
-        <button type="submit" class="w-full bg-white text-blue-600 px-4 py-2 rounded-md hover:bg-gray-200 transition duration-300 font-bold">Enviar Mensagem</button>
-    
-    </form>
-</div>
+            <div class="space-y-4">
+                <input type="text" id="name" placeholder="Nome" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input type="email" id="email" placeholder="E-mail" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <textarea id="message" placeholder="Mensagem" rows="4" class="w-full px-4 py-2 rounded-md bg-blue-800 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                <button id="contact-submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Enviar Mensagem</button>
+            </div>
         </div>
     </div>
 </section>
@@ -272,11 +256,6 @@
 </button>
 
 <script>
-    // Bloquear clique com o botão direito
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
     // Menu Mobile
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -284,20 +263,6 @@ document.addEventListener('contextmenu', function(e) {
         mobileMenu.classList.toggle('hidden');
         mobileMenu.classList.toggle('open');
     });
-// Bloquear teclas de atalho comuns
-document.addEventListener('keydown', function(e) {
-    // F12
-    if (e.key === 'F12') e.preventDefault();
-
-    // Ctrl+Shift+I ou Ctrl+Shift+J
-    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) e.preventDefault();
-
-    // Ctrl+U (ver código fonte)
-    if (e.ctrlKey && e.key === 'u') e.preventDefault();
-
-    // Ctrl+S (salvar página)
-    if (e.ctrlKey && e.key === 's') e.preventDefault();
-});
 
     // Smooth Scroll
     document.querySelectorAll('.smooth-scroll').forEach(anchor => {
@@ -322,11 +287,12 @@ document.addEventListener('keydown', function(e) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('is-visible');
+                // Otimização: para de observar o elemento uma vez que ele já está visível
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.1 // A animação começa quando 10% do elemento está visível
     });
     sections.forEach(section => {
         observer.observe(section);
@@ -362,11 +328,11 @@ document.addEventListener('keydown', function(e) {
             return;
         }
         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        // Limpa os campos após o envio
         document.getElementById('name').value = '';
         document.getElementById('email').value = '';
         document.getElementById('message').value = '';
     });
-    
 </script>
 </body>
 </html>
